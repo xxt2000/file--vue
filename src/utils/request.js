@@ -2,11 +2,14 @@
 import axios from 'axios'
 // 引入 Element Plus 的消息提示组件，用于显示错误信息
 import { ElMessage } from 'element-plus'
+// 从 .env 文件中读取后端地址
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 // 创建 axios 实例，进行全局配置
 const request = axios.create({
     // 设置基础 URL，所有请求都会自动拼接这个前缀
-    baseURL: '/api',
+    baseURL: API_BASE_URL,
     // 设置请求超时时间为 60 秒
     timeout: 60000,
 })

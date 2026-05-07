@@ -21,8 +21,8 @@
       <el-select v-if="!currentFolder" v-model="searchParams.category" placeholder="选择分类" clearable style="width: 150px"
                  @change="fetchFiles">
         <el-option label="图片" value="图片"/>
-        <el-option label="配置文件" value="配置文件"/>
-        <el-option label="脚本工具" value="脚本工具"/>
+        <el-option label="视频" value="视频"/>
+        <el-option label="代码文件" value="代码文件"/>
         <el-option label="文档" value="文档"/>
       </el-select>
 
@@ -175,8 +175,8 @@
         <el-form-item label="分类">
           <el-select v-model="uploadForm.category" placeholder="请选择分类">
             <el-option label="图片" value="图片"/>
-            <el-option label="配置文件" value="配置文件"/>
-            <el-option label="脚本工具" value="脚本工具"/>
+            <el-option label="视频" value="视频"/>
+            <el-option label="代码文件" value="代码文件"/>
             <el-option label="文档" value="文档"/>
           </el-select>
         </el-form-item>
@@ -215,8 +215,8 @@
         <el-form-item label="分类">
           <el-select v-model="editForm.category">
             <el-option label="图片" value="图片"/>
-            <el-option label="配置文件" value="配置文件"/>
-            <el-option label="脚本工具" value="脚本工具"/>
+            <el-option label="视频" value="视频"/>
+            <el-option label="代码文件" value="代码文件"/>
             <el-option label="文档" value="文档"/>
           </el-select>
         </el-form-item>
@@ -499,8 +499,8 @@ const formatFileSize = (bytes) => {
 const getCategoryType = (category) => {
   const types = {
     '图片': 'danger',
-    '配置文件': 'warning',
-    '脚本工具': 'success',
+    '视频': 'warning',
+    '代码文件': 'success',
     '文档': 'info'
   }
   return types[category] || 'primary'

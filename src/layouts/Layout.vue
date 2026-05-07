@@ -115,7 +115,7 @@
         <el-button type="primary" @click="submitPassword">确认</el-button>
       </template>
     </el-dialog>
-     <BigScreen />
+     <!-- <BigScreen /> -->
   </div>
 </template>
 

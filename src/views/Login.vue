@@ -106,15 +106,11 @@ const handleLogin = async () => {
   try {
     // 调用用户 store 的登录方法，传入用户名和密码
     const success = await userStore.login(loginForm.value.username, loginForm.value.password)
-    // 如果登录成功
-    if (success) {
-      // 显示成功消息
+    // // 如果登录成功
+    console.log('登录成功:', success.success)
+    if (success.success) {
       ElMessage.success('登录成功')
-      // 跳转到首页
       router.push('/')
-    } else {
-      // 如果登录失败，显示错误消息
-      ElMessage.error('用户名或密码错误')
     }
   } catch (error) {
     // 捕获异常，显示错误消息

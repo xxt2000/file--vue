@@ -12,7 +12,7 @@ export const getFileList = (params) => {
 // 上传文件
 export const uploadFile = (formData) => {
     return request({
-        url: '/upload',
+        url: '/files/upload',
         method: 'post',
         data: formData
     })
